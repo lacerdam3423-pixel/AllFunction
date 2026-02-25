@@ -157,7 +157,7 @@ local function SetupPlayer(plr)
          Rayfield:Notify({
             Title = "Player Died",
             Content = plr.Name .. " has died!",
-            Duration = 5
+            Duration = 2
          })
          RemoveESP(plr)
       end)
@@ -172,7 +172,7 @@ local function SetupPlayer(plr)
             Rayfield:Notify({
                Title = "Player Died",
                Content = plr.Name .. " has died!",
-               Duration = 5
+               Duration = 2
             })
             RemoveESP(plr)
          end)
@@ -188,7 +188,7 @@ Players.PlayerAdded:Connect(function(plr)
    Rayfield:Notify({
       Title = "Player Joined",
       Content = plr.Name .. " has joined the server!",
-      Duration = 5
+      Duration = 2
    })
    SetupPlayer(plr)
 end)
@@ -197,13 +197,13 @@ Players.PlayerRemoving:Connect(function(plr)
    Rayfield:Notify({
       Title = "Player Left",
       Content = plr.Name .. " has left the server!",
-      Duration = 5
+      Duration = 2
    })
    RemoveESP(plr)
 end)
 
 TabVisual:CreateToggle({
-   Name = "ESP (Name + HP + Dist + Outline)",
+   Name = ".",
    CurrentValue = false,
    Callback = function(v)
       ESP_Enabled = v
@@ -248,7 +248,7 @@ TabMove:CreateSlider({
    Name = "WalkSpeed Permanente",
    Range = {10, 200},
    Increment = 1,
-   CurrentValue = 16,
+   CurrentValue = 37,
    Callback = function(v)
       WalkSpeed_Value = v
       if LocalPlayer.Character and LocalPlayer.Character:FindFirstChildOfClass("Humanoid") then
@@ -311,7 +311,7 @@ TabOther:CreateToggle({
    Callback = function(v)
       if v then
          Lighting.FogEnd = 9999
-         Lighting.FogStart = 9998
+         Lighting.FogStart = 0
       else
          Lighting.FogEnd = 100000
       end
@@ -338,7 +338,7 @@ TabOther:CreateButton({
 })
 
 Rayfield:Notify({
-   Title = "Hub Corrigido",
-   Content = "ESP atualiza automaticamente a cada ~0.1s\nInfinite Jump mais estável\nBoa sorte!",
+   Title = "Script Load",
+   Content = "Script Loading",
    Duration = 6
 })
