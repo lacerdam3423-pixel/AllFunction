@@ -2,10 +2,10 @@ wait("0.1")
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
-   Name = "Universal Hub ~ Atualizado 2026",
+   Name = "Script All Function",
    LoadingTitle = "Carregando...",
-   LoadingSubtitle = "ESP atualiza a cada ~0.1s",
-   Theme = "Mayura",
+   LoadingSubtitle = "by MigueleMaxwell ;]",
+   Theme = "Dark",
    ConfigurationSaving = { Enabled = true, FolderName = "MeuHub", FileName = "Config" }
 })
 
